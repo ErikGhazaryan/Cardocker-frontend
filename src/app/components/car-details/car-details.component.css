@@ -1,0 +1,25 @@
+mydiv {
+ width: 100px;   
+ 
+} 
+
+picsum-img-wrapper {
+    width: 100px;
+    length:100px;
+}
+
+carousel-caption {
+    width: 100px;
+    length: 100px;
+}
+
+.column-50 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 450px; /* Should be removed. Only for demonstration */
+  }
+
+  .make-banner {
+    text-align:center
+  }

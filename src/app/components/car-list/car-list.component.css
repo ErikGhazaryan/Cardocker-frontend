@@ -1,0 +1,14 @@
+.column-30 {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    height: 400px; /* Should be removed. Only for demonstration */
+    max-height: 600px;
+  }
+
+  .column-70 {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    height: 450px; /* Should be removed. Only for demonstration */
+  }

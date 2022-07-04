@@ -1,0 +1,102 @@
+<div class="section-content section-content-p30">
+    <div class="container-fluid">
+
+        <form [formGroup]="searchCriteriaForm" (ngSubmit)="onSumbit()">
+            <!--customer form group-->
+            <div formGroupName="carMakeGroupName" class="form-area">
+
+                <div class="row">
+                    <div class="col-md-12"> <label>Car Make</label></div>
+                    <div class="col-md-12">
+                        <div class="input-space">
+                            <select formControlName="carMakeName">
+                                <option *ngFor="let tempMake of makes" [ngValue]="tempMake">
+                                    {{ tempMake.makeName }}
+                                </option>
+                            </select>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"> <label>Body Style</label></div>
+                    <div class="col-md-12">
+                        <div class="input-space">
+                            <select formControlName="carBodyStyle">
+                                <option *ngFor="let tempBodyStyle of bodyStyles" [ngValue]="tempBodyStyle">
+                                    {{ tempBodyStyle.bodyStyleName }}
+
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-12"> <label>Car Price Min</label></div>
+                    <div class="col-md-12">
+                        <div class="input-space">
+                            <select formControlName="carPriceMin">
+                                <option *ngFor="let tempCarPriceMin of carPriceOptions" [ngValue]="tempCarPriceMin">
+                                    {{ tempCarPriceMin }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"> <label>Car Price Max</label></div>
+                    <div class="col-md-12">
+                        <div class="input-space">
+                            <select formControlName="carPriceMax">
+                                <option *ngFor="let tempCarPriceMax of carPriceOptions" [ngValue]="tempCarPriceMax">
+                                    {{ tempCarPriceMax }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-md-12"> <label>Produced after</label></div>
+                    <div class="col-md-12">
+                        <div class="input-space">
+                            <select formControlName="carYearOfProductionFrom">
+                                <option *ngFor="let tempYearOfProduction of yearsOfProduction" [ngValue]="tempYearOfProduction">
+                                    {{ tempYearOfProduction }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12"> <label>Produced before</label></div>
+                    <div class="col-md-12">
+                        <div class="input-space">
+                            <select formControlName="carYearOfProductionTill">
+                                <option *ngFor="let tempYearOfProduction of yearsOfProduction" [ngValue]="tempYearOfProduction">
+                                    {{ tempYearOfProduction }}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <!--submit button-->
+            <div class="text-center">
+                <button type="submit" class="btn btn-info">
+                    Search
+                </button>
+            </div>
+            <hr>
+            <div class="text-center">
+                <button  class="btn btn-info" (click)="restoreToDefaults()">
+                    Restore filters to default
+                </button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
